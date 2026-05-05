@@ -4,3 +4,18 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+# On hérite des versions gérées par le workspace racine
+tokio = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+sqlx = { workspace = true }
+uuid = { workspace = true }
+
+# Ajoute ici les dépendances spécifiques à la logique partagée
+chrono = { version = "0.4", features = ["serde"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+dotenvy = "0.15"
+aes-gcm = "0.10"
+rand = "0.8"
+thiserror = "1"
+anyhow = "1"
