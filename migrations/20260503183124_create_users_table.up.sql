@@ -5,5 +5,6 @@ CREATE TABLE IF NOT EXISTS users (
     lastname TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
-    created_at TIMESTAMPTZ NULL DEFAULT NOW()
+    created_at TIMESTAMPTZ NULL DEFAULT NOW(),
+    virtual_balance DOUBLE PRECISION DEFAULT 1000.0
 );
